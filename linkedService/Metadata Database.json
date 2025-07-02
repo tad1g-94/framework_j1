@@ -1,24 +1,25 @@
 {
-    "$schema": "../src/json_schema/azure_metadata_database_schema.json",
-    "name": "Metadata Database",
-    "properties": {
-        "annotations": [],
-        "type": "AzureSqlDatabase",
-        "typeProperties": {
-            "server": "fj1sqlserver-4brjdc8.database.windows.net",
-            "database": "fj1-metadata-uks",
-            "encrypt": "mandatory",
-            "trustServerCertificate": false,
-            "authenticationType": "SQL",
-            "userName": "junior_admin",
-            "password": {
-                "type": "AzureKeyVaultSecret",
-                "store": {
-                    "referenceName": "Azure Key Vault",
-                    "type": "LinkedServiceReference"
-                },
-                "secretName": "sqlPassword"
-            }
-        }
-    }
+	"name": "Metadata Database",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "fj1sqlserver-83r8llp.database.windows.net",
+			"database": "fj1-metadata-uks",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "dylan",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "Azure Key Vault",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "sqlPassword",
+				"secretVersion": "e4a089dbb67146deb542bea85b0ca1ac"
+			}
+		}
+	},
+	"$schema": "../src/json_schema/azure_metadata_database_schema.json"
 }
